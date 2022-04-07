@@ -22,6 +22,7 @@ Sign a Document
     ClickText              sign
     ClickText              Please review the documents below.
     ClickText              Continue  anchor=Other Actions
+    VerifyText             Signature   anchor=Initial
     QVision.HoverText      Signature   pause=1s  anchor=Initial
     QVision.DragTo         Sample PDF  below=20
     ${adopt}=              IsText          Adopt Your Signature

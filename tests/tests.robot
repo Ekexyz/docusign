@@ -29,10 +29,16 @@ Sign a Document
     ClickText            Finish          anchor=Other Actions
     VerifyText           Sign and Return
     TypeText             Full Name       Erkka
-    TypeText             Email Address   erkka.karimaki@protonmail.com
+    TypeText             Email Address   ${PROTON_USERNAME}
     TypeText             Message         Hello,\n\nSigned sample pdf.\n\nBr,\Name
     ClickText            Send and CLose  anchor=No Thanks
 
 Verify Email
-
+    [Documentation]    Log in to email and verify
+    OpenWindow
+    SwitchWindow       NEW
+    GoTo               https://protonmail.com
+    ClickText          Log In  anchor=Sign Up
+    TypeText           Email or username    ${PROTON_USERNAME}
+    TypeSecret         Password             ${PROTON_PASSWORD}
 

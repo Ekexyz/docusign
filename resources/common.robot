@@ -30,7 +30,7 @@ Home
     TypeText                     Enter email    ${USERNAME}
     ClickText                    Next
     VerifyText                   Password
-    TypeText                     Enter password  Qentinel2022!
+    TypeText                     Enter password  ${PASSWORD}
     ClickText                    Log In
 
 

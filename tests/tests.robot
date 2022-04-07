@@ -16,9 +16,13 @@ Sign a Document
     VerifyText             Add Documents
     QVision.ClickText      other Locations
     QVision.ClickText      Computer
-    QVision.LogScreenshot  mode=annotated
-    QVision.ClickText      execution
-    QVision.LogScreenshot  mode=annotated
+    # check if headless run
+    ${headless}=           QVision.IsText         execution
+    IF  ${headless}
+      QVision.ClickText      execution
+      QVision.ClickText      docusign  anchor=screenshorts
+      QVision.LogScreenshot  mode=annotated
+    END
 
 Sample
     QVision.DoubleClick    ample  anchor=log

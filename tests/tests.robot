@@ -14,13 +14,17 @@ Sign a Document
     VerifyText             Desktop
     ClickText              Desktop
     VerifyText             Add Documents
-    QVision.ClickText      Other Locations
+    QVision.ClickText      other Locations
     QVision.ClickText      Computer
     QVision.LogScreenshot  mode=annotated
-    QVision.DoubleClick    tmp  anchor=sys
-    QVision.DoubleClick    ample
+    QVision.DoubleClick    tmp    anchor=var
+    QVision.LogScreenshot  mode=annotated
+    QVision.DoubleClick    ample  anchor=log
+    QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    suite  anchor=terraform
+    QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    files  anchor=resources
+    QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    sample.pdf
     ClickCheckbox          I'm the only signer  on
     ClickText              sign

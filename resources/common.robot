@@ -21,6 +21,7 @@ End suite
 
 Home
     [Documentation]    Navigate to DocuSign and sign in
+    # close cookies popup if exists
     ${cookies}=        IsText    Accept All Cookies
     Run Keyword And Return If    ${cookies}
     ...  ClickText               Accept All Cookies

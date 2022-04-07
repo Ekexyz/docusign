@@ -21,7 +21,8 @@ Sign a Document
     IF  ${headless}
       QVision.ClickText      execution
       QVision.DoubleClick    docusign  anchor=Name
-      QVision.LogScreenshot  mode=annotated
+      QVision.DoubleClick    files     anchor=resources
+      QVision.DoubleClick    sample.pdf
     END
 
 Sample

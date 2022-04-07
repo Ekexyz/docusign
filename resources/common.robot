@@ -5,7 +5,6 @@ Library    QVision
 *** Variables ***
 ${BROWSER}          chrome
 ${LOGIN_URL}        https://www.docusign.com/
-${USERNAME}         erkka.karimaki@qentinel.com
 
 *** Keywords ***
 Start suite
@@ -41,4 +40,11 @@ Protonmail
     ClickText          Log In  anchor=Sign Up
     TypeText           Email or username    ${PROTON_USERNAME}
     TypeSecret         Password             ${PROTON_PASSWORD}
-    
+    ClickText          Sign In              anchor=New to Protonmail
+    VerifyText         Welcome erkka
+    VerifyText         Erkka Karimäki via Docusign  index=1
+    ClickText          Erkka Karimäki via DocuSign  index=1
+    VerifyText         Signed sample pdf.
+    ClickText          ${PROTON_USERNAME}
+    ClickText          Sign out
+    VerifyText         Email or username

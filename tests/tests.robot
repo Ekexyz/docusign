@@ -17,8 +17,10 @@ Sign a Document
     QVision.ClickText      other Locations
     QVision.ClickText      Computer
     QVision.LogScreenshot  mode=annotated
-    QVision.DoubleClick    tmp    anchor=var
+    QVision.ClickText      execution
     QVision.LogScreenshot  mode=annotated
+
+Sample
     QVision.DoubleClick    ample  anchor=log
     QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    suite  anchor=terraform

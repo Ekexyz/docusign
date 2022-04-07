@@ -20,7 +20,7 @@ Sign a Document
     ${headless}=           QVision.IsText         execution
     IF  ${headless}
       QVision.ClickText      execution
-      QVision.ClickText      docusign  anchor=screenshorts
+      QVision.ClickText      docusign  anchor=Name
       QVision.LogScreenshot  mode=annotated
     END
 

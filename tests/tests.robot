@@ -24,8 +24,9 @@ Sign a Document
     ClickText              Continue  anchor=Other Actions
     QVision.HoverText      Signature
     QVision.DragTo         Sample PDF  below=20
-    VerifyText             Adopt Your Signature
-    ClickText              Adopt and Sign  anchor=Cancel
+    ${adopt}=              IsText          Adopt Your Signature
+    Run Keyword If         ${adopt}
+    ...                    ClickText              Adopt and Sign  anchor=Cancel
     ClickText              Finish          anchor=Other Actions
     VerifyText             Sign and Return
     TypeText               Full Name       Erkka
@@ -36,11 +37,25 @@ Sign a Document
 Verify Email
     [Documentation]    Log in to email and verify
     Appstate           Protonmail
-    VerifyText         Welcome erkka
-    VerifyText         Erkka Karimäki via Docusign  index=1
+    VerifyText         Welcome Erkka
+    VerifyText         Erkka Karimäki via DocuSign  index=1
     ClickText          Erkka Karimäki via DocuSign  index=1
     VerifyText         Signed sample pdf.
+    VerifyText         VIEW DOCUMENT
+    ClickText          VIEW DOCUMENT
+    VerifyText         Link confirmation
+    ClickText          Confirm                      anchor=Cancel
+    SwitchWindow       NEW
+    QVision.VerifyText                              Sample PDF
+    ClickText          Close
+    VerifyText         You're All Done!
+    CloseWindow
+    # logout from proton
     ClickText          ${PROTON_USERNAME}
     ClickText          Sign out
     VerifyText         Email or username
-
+    CloseWindow
+    # logout from docusign
+    ClickText          EK
+    ClickText          Log out
+    VerifyText         Log In

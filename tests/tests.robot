@@ -35,5 +35,12 @@ Sign a Document
 
 Verify Email
     [Documentation]    Log in to email and verify
-
+    Appstate           Protonmail
+    VerifyText         Welcome erkka
+    VerifyText         Erkka Karimäki via Docusign  index=1
+    ClickText          Erkka Karimäki via DocuSign  index=1
+    VerifyText         Signed sample pdf.
+    ClickText          ${PROTON_USERNAME}
+    ClickText          Sign out
+    VerifyText         Email or username
 

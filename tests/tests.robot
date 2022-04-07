@@ -16,6 +16,7 @@ Sign a Document
     VerifyText             Add Documents
     QVision.ClickText      Other Locations
     QVision.ClickText      Computer
+    QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    tmp  anchor=sys
     QVision.DoubleClick    ample
     QVision.DoubleClick    suite  anchor=terraform

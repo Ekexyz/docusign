@@ -38,6 +38,6 @@ Protonmail
     SwitchWindow       NEW
     GoTo               https://protonmail.com
     ClickText          Log In  anchor=Sign Up
-    TypeText           Email or username    ${PROTON_USERNAME}
+    TypeText           Email or username    ${PROTON_USERNAME}  delay=2s
     TypeSecret         Password             ${PROTON_PASSWORD}
     ClickText          Sign In              anchor=New to Protonmail

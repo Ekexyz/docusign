@@ -34,4 +34,11 @@ Home
     TypeText                     Enter password  ${PASSWORD}
     ClickText                    Log In
 
-
+Protonmail
+    OpenWindow
+    SwitchWindow       NEW
+    GoTo               https://protonmail.com
+    ClickText          Log In  anchor=Sign Up
+    TypeText           Email or username    ${PROTON_USERNAME}
+    TypeSecret         Password             ${PROTON_PASSWORD}
+    

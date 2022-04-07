@@ -16,22 +16,17 @@ Sign a Document
     VerifyText             Add Documents
     QVision.ClickText      other Locations
     QVision.ClickText      Computer
-    # check if headless run
+    # check if headless run, different folder structure
     ${headless}=           QVision.IsText         execution
     IF  ${headless}
       QVision.ClickText      execution
       QVision.DoubleClick    docusign  anchor=Name
       QVision.DoubleClick    files     anchor=resources
-      QVision.DoubleClick    sample.pdf
+    ELSE
+      QVision.ClickText      tests  anchor=Desktop
+      QVision.ClickText      suite  anchor=amble
+      QVision.DoubleClick    files  anchor=resources
     END
-
-Sample
-    QVision.DoubleClick    ample  anchor=log
-    QVision.LogScreenshot  mode=annotated
-    QVision.DoubleClick    suite  anchor=terraform
-    QVision.LogScreenshot  mode=annotated
-    QVision.DoubleClick    files  anchor=resources
-    QVision.LogScreenshot  mode=annotated
     QVision.DoubleClick    sample.pdf
     ClickCheckbox          I'm the only signer  on
     ClickText              sign

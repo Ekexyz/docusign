@@ -7,3 +7,9 @@ Suite Teardown  End suite
 Sign a Document
     [Documentation]    Login to DocuSign and sign a pdf file
     Appstate           Home
+    VerifyText         Start Now
+    ClickText          Start Now
+    VerifyText         Drop your files here or
+    ClickText          Upload
+    VerifyText         Desktop
+    ClickText          Desktop

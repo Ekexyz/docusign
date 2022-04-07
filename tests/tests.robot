@@ -22,7 +22,7 @@ Sign a Document
     ClickText              sign
     ClickText              Please review the documents below.
     ClickText              Continue  anchor=Other Actions
-    QVision.HoverText      Signature
+    QVision.HoverText      Signature   pause=1s  anchor=Initial
     QVision.DragTo         Sample PDF  below=20
     ${adopt}=              IsText          Adopt Your Signature
     Run Keyword If         ${adopt}
@@ -31,7 +31,7 @@ Sign a Document
     VerifyText             Sign and Return
     TypeText               Full Name       Erkka
     TypeText               Email Address   ${PROTON_USERNAME}
-    TypeText               Message         Hello,\n\nSigned sample pdf.\n\nBr,\Name
+    TypeText               Message         Hello,\n\nSigned sample pdf.\n\nBr,\n Me
     ClickText              Send and CLose  anchor=No Thanks
 
 Verify Email

@@ -14,8 +14,11 @@ Sign a Document
     VerifyText             Desktop
     ClickText              Desktop
     VerifyText             Add Documents
-    QVision.ClickText      tests  anchor=Desktop
-    QVision.ClickText      suite  anchor=amble
+    QVision.ClickText      Other Locations
+    QVision.ClickText      Computer
+    QVision.DoubleClick    tmp  anchor=sys
+    QVision.DoubleClick    ample
+    QVision.DoubleClick    suite  anchor=terraform
     QVision.DoubleClick    files  anchor=resources
     QVision.DoubleClick    sample.pdf
     ClickCheckbox          I'm the only signer  on

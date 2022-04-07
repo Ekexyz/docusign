@@ -66,7 +66,4 @@ Verify Email
     ClickText          Sign out
     VerifyText         Email or username
     CloseWindow
-    # logout from docusign
-    ClickText          EK
-    ClickText          Log out
-    VerifyText         Log In
+

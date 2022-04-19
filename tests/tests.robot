@@ -5,7 +5,7 @@ Suite Teardown  End suite
 
 *** Test Cases ***
 Sign a Document
-    [Documentation]        Login to DocuSign and sign a pdf file
+    [Documentation]        Login to DocuSign and sign a pdf file.
     Appstate               Home
     VerifyText             Start Now
     ClickText              Start Now

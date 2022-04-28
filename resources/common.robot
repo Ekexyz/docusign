@@ -19,19 +19,18 @@ End suite
     CloseAllBrowsers
 
 Home
-    [Documentation]    Navigate to DocuSign and sign in
-    # close cookies popup if exists
-    ${cookies}=        IsText    Accept All Cookies
-    Run Keyword If               ${cookies}
-    ...  ClickText               Accept All Cookies
-    VerifyText                   Log In
-    ClickText                    Log In
-    VerifyText                   Email
-    TypeText                     Enter email    ${USERNAME}
-    ClickText                    Next
-    VerifyText                   Password
-    TypeText                     Enter password  ${PASSWORD}
-    ClickText                    Log In
+    [Documentation]   Navigate to DocuSign and sign in
+    OpenBrowser       about:blank       chrome
+    ${cookies} =      IsText            Accept All Cookies
+    Run Keyword If    ${cookies}        ClickText         Accept All Cookies
+    VerifyText        Log In
+    ClickText         Log In
+    VerifyText        Email
+    TypeText          Enter email       ${username}
+    ClickText         Next
+    VerifyText        Password
+    TypeText          Enter password    ${password}
+    ClickText         Log In
 
 Protonmail
     OpenWindow

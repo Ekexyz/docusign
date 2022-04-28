@@ -20,7 +20,6 @@ End suite
 
 Home
     [Documentation]   Navigate to DocuSign and sign in
-    OpenBrowser       about:blank       chrome
     ${cookies} =      IsText            Accept All Cookies
     Run Keyword If    ${cookies}        ClickText         Accept All Cookies
     VerifyText        Log In

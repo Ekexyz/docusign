@@ -44,6 +44,9 @@ Sign a Document
     TypeText               Email Address   ${PROTON_USERNAME}
     TypeText               Message         Hello,\n\nSigned sample pdf.\n\nBr,\n Me
     ClickText              Send and Close  anchor=No Thanks
+    ${question}=           IsText          You're Done! Want To Sign Another Document?
+    Run Keyword If         ${question}
+    ...                    ClickText       No Thanks    
 
 Verify Email
     [Documentation]    Log in to email and verify

@@ -43,7 +43,7 @@ Sign a Document
     TypeText               Full Name       Erkka
     TypeText               Email Address   ${PROTON_USERNAME}
     TypeText               Message         Hello,\n\nSigned sample pdf.\n\nBr,\n Me
-    ClickText              Send and CLose  anchor=No Thanks
+    ClickText              Send and Close  anchor=No Thanks
 
 Verify Email
     [Documentation]    Log in to email and verify

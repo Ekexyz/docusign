@@ -2,7 +2,7 @@
 
 Sample automation for signing a PDF in DocuSign and verifying that notification email is sent.
 
-In Copado Robotic Testing https://robotic.copado.com set hidden suite variables for
+In Copado Robotic Testing https://robotic.copado.com configure the hidden suite variables for
 
 Docusign:
 - USERNAME
